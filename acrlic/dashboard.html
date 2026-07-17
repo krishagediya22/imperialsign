@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Dashboard — ACRLIC</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <div class="bg-grain"></div>
+
+  <header class="site-header scrolled" id="header">
+    <div class="container nav" id="nav">
+      <a href="index.html" class="logo"><span class="logo-mark">A</span> ACRLIC</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Order</a>
+        <a href="dashboard.html" class="active">Orders</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+        <a href="order.html" class="btn btn-primary btn-sm">New order</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Orders</div>
+      <h1>Order management</h1>
+      <p>Track production stages, shipments, and quotes for every acrylic letter job.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container dash-layout">
+      <aside class="dash-side">
+        <a href="dashboard.html" class="active">Overview</a>
+        <a href="order.html">New order</a>
+        <a href="products.html">Catalog</a>
+        <a href="contact.html">Support</a>
+        <a href="login.html">Account</a>
+      </aside>
+
+      <div class="dash-main">
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-label">Active orders</div>
+            <div class="stat-value">7</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">In production</div>
+            <div class="stat-value">3</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Shipped</div>
+            <div class="stat-value">12</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">This month</div>
+            <div class="stat-value">$4.2k</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Recent orders</h2>
+            <a href="order.html" class="btn btn-primary btn-sm">Place order</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Text</th>
+                  <th>Style</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody">
+                <tr>
+                  <td>ACR-1042</td>
+                  <td>NOVA CAFE</td>
+                  <td>Sky LED Back</td>
+                  <td>Jul 14, 2026</td>
+                  <td>$1,140</td>
+                  <td><span class="status status-production">Production</span></td>
+                  <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+                <tr>
+                  <td>ACR-1038</td>
+                  <td>ATELIER</td>
+                  <td>Copper Mirror</td>
+                  <td>Jul 11, 2026</td>
+                  <td>$496</td>
+                  <td><span class="status status-pending">Pending</span></td>
+                  <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+                <tr>
+                  <td>ACR-1031</td>
+                  <td>FLOOR 3</td>
+                  <td>Matte Flat Cut</td>
+                  <td>Jul 08, 2026</td>
+                  <td>$196</td>
+                  <td><span class="status status-shipped">Shipped</span></td>
+                  <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+                <tr>
+                  <td>ACR-1024</td>
+                  <td>SPA HOUSE</td>
+                  <td>Frosted Clear</td>
+                  <td>Jul 02, 2026</td>
+                  <td>$360</td>
+                  <td><span class="status status-shipped">Shipped</span></td>
+                  <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+                <tr>
+                  <td>ACR-1019</td>
+                  <td>OPEN</td>
+                  <td>Teal Edge Cut</td>
+                  <td>Jun 28, 2026</td>
+                  <td>$192</td>
+                  <td><span class="status status-cancelled">Cancelled</span></td>
+                  <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2>Production pipeline</h2>
+          </div>
+          <div class="process" style="gap:1rem;">
+            <div class="process-item" style="opacity:1; transform:none;">
+              <h3>Design review</h3>
+              <p>2 orders awaiting artwork approval.</p>
+            </div>
+            <div class="process-item" style="opacity:1; transform:none;">
+              <h3>Cutting</h3>
+              <p>CNC queue: ACR-1042, ACR-1038.</p>
+            </div>
+            <div class="process-item" style="opacity:1; transform:none;">
+              <h3>Polish &amp; LED</h3>
+              <p>1 LED set in finishing bay.</p>
+            </div>
+            <div class="process-item" style="opacity:1; transform:none;">
+              <h3>Pack &amp; ship</h3>
+              <p>Next dispatch window: Fri 10am.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-mark">A</span> ACRLIC</a>
+          <p class="footer-about">Acrylic letter and design ordering studio for brands, shops, and interiors.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="products.html">Products</a>
+          <a href="order.html">Place order</a>
+          <a href="dashboard.html">Order status</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="contact.html">Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ACRLIC Studio</span>
+        <span>Acrylic Letter Ordering System</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

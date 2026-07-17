@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Order — ACRLIC</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <div class="bg-grain"></div>
+
+  <header class="site-header scrolled" id="header">
+    <div class="container nav" id="nav">
+      <a href="index.html" class="logo"><span class="logo-mark">A</span> ACRLIC</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html" class="active">Order</a>
+        <a href="dashboard.html">Orders</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Order</div>
+      <h1>Configure your letter order</h1>
+      <p>Enter your text and specs — preview updates live as you design.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container order-layout">
+      <div class="order-form-panel">
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="letterText">Letter / word text</label>
+            <input type="text" id="letterText" name="letterText" value="ACRLIC" maxlength="24" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="style">Style</label>
+              <select id="style" name="style">
+                <option value="teal-edge">Teal Edge Cut</option>
+                <option value="copper-mirror">Copper Mirror</option>
+                <option value="sky-led">Sky LED Back</option>
+                <option value="matte-flat">Matte Flat Cut</option>
+                <option value="walnut">Walnut Face Cap</option>
+                <option value="frosted">Frosted Clear</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fontStyle">Font style</label>
+              <select id="fontStyle" name="fontStyle">
+                <option value="bold">Bold Sans</option>
+                <option value="condensed">Condensed</option>
+                <option value="script">Script Accent</option>
+                <option value="block">Block Display</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="height">Letter height (cm)</label>
+              <select id="height" name="height">
+                <option value="10">10 cm</option>
+                <option value="15" selected>15 cm</option>
+                <option value="20">20 cm</option>
+                <option value="30">30 cm</option>
+                <option value="45">45 cm</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="thickness">Thickness</label>
+              <select id="thickness" name="thickness">
+                <option value="3">3 mm</option>
+                <option value="5" selected>5 mm</option>
+                <option value="10">10 mm</option>
+                <option value="15">15 mm</option>
+                <option value="20">20 mm</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="color">Color</label>
+              <select id="color" name="color">
+                <option value="#7fd4cb">Teal Clear</option>
+                <option value="#e8a66a">Copper</option>
+                <option value="#ffffff">White</option>
+                <option value="#0c1922">Ink Black</option>
+                <option value="#a8d4f0">Sky Frost</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mount">Mounting</label>
+              <select id="mount" name="mount">
+                <option value="tape">Foam tape</option>
+                <option value="standoff" selected>Stand-off studs</option>
+                <option value="rail">Hidden rail</option>
+                <option value="none">None (DIY)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="qty">Quantity (sets)</label>
+            <input type="number" id="qty" name="qty" min="1" max="50" value="1" />
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes / installation address</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Wall type, delivery notes, brand guidelines…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit order</button>
+        </form>
+      </div>
+
+      <aside class="order-summary">
+        <h2>Order summary</h2>
+        <div class="summary-row"><span>Letters</span><span id="sumLetters">6</span></div>
+        <div class="summary-row"><span>Style</span><span id="sumStyle">Teal Edge Cut</span></div>
+        <div class="summary-row"><span>Size</span><span id="sumSize">15 cm · 5 mm</span></div>
+        <div class="summary-row"><span>Qty</span><span id="sumQty">1 set</span></div>
+        <div class="summary-row total"><span>Est. total</span><span id="sumTotal">$288</span></div>
+        <div class="preview-box">
+          <div id="livePreview">ACRLIC</div>
+        </div>
+        <p style="margin-top:1rem; font-size:0.85rem; color:var(--muted);">Estimate only. Final quote after design review.</p>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-mark">A</span> ACRLIC</a>
+          <p class="footer-about">Acrylic letter and design ordering studio for brands, shops, and interiors.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="products.html">Products</a>
+          <a href="order.html">Place order</a>
+          <a href="dashboard.html">Order status</a>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="contact.html">Support</a>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ACRLIC Studio</span>
+        <span>Acrylic Letter Ordering System</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
